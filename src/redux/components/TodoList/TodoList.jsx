@@ -12,6 +12,7 @@ import { useQuery } from "react-query";
  */
 function TodoList({ isActive }) {
   const { isLoading, isError, data } = useQuery("todos", getTodos);
+  console.log("데이터가 뭐지?", data);
 
   if (isLoading) {
     return <p>로딩중입니다....!</p>;
